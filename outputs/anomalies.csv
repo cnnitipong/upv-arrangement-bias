@@ -1,0 +1,13 @@
+﻿col,point,vel,rebN,method,quality,priority,mahalanobis
+C1-7A : C1-D,C6,2.316,61.0,Indirect,Doubtful,3,3.7252904302159653
+C1-3A : C1-D,C1,2.68,61.0,Indirect,Doubtful,3,3.192131714865953
+C1.1B : C1.F,B2,2.172,55.0,Indirect,Doubtful,2,3.040874320407197
+C1.1B : C1.F,A1,2.287,52.0,Indirect,Doubtful,2,3.038963435328036
+C1-1A : C1.C,B9,2.375,58.0,Indirect,Doubtful,1,2.978353511734045
+C1-1A : C1.C,B2,2.247,56.0,Indirect,Doubtful,1,2.958520212475159
+C1-8A : C1.E,B2,2.761,60.0,Indirect,Doubtful,3,2.7981165412353204
+C1.1B : C1.F,B3,2.508,52.0,Indirect,Doubtful,2,2.733050293645856
+C1.3A : C1.C,A3,2.698,51.0,Indirect,Doubtful,2,2.701057866221046
+C1.7A : C1-B,DB1,2.386,55.5,Semi-Indirect,Doubtful,3,2.6950146776701738
+C1-1B : C1.F,AC3,2.752,59.5,Semi-Indirect,Doubtful,1,2.682666763519426
+C1.1A : C1.E,A1,2.398,54.0,Indirect,Doubtful,2,2.6809182656556607

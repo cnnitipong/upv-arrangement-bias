@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below and cite the associated article."
+title: "Measurement bias in ultrasonic pulse velocity assessment of reinforced concrete: code and data"
+repository-code: "https://github.com/cnnitipong/upv-arrangement-bias"
+url: "https://github.com/cnnitipong/upv-arrangement-bias"
+version: 1.0.0
+date-released: 2026-11-02
+license: MIT
+authors:
+  - family-names: Praphaphankul
+    given-names: Nitipong
+    affiliation: Chulalongkorn University
+  - family-names: Tiprak
+    given-names: Koravith
+    affiliation: Chulalongkorn University
+  - family-names: Wongthongsiri
+    given-names: Supawat
+    affiliation: Chulalongkorn University
+  - family-names: Kunawisarut
+    given-names: Atichon
+    affiliation: Chulalongkorn University
+keywords:
+  - ultrasonic pulse velocity
+  - rebound hammer
+  - transducer arrangement
+  - measurement bias
+  - reinforced concrete
+preferred-citation:
+  type: article
+  title: "Measurement bias in ultrasonic pulse velocity assessment of reinforced concrete: consequences for quality classification and repair decisions"
+  journal: "Results in Engineering"
+  year: 2026
+  status: in-review
+  notes: "Under review"
+  authors:
+    - family-names: Praphaphankul
+      given-names: Nitipong
+      affiliation: Chulalongkorn University
+    - family-names: Tiprak
+      given-names: Koravith
+      affiliation: Chulalongkorn University
+    - family-names: Wongthongsiri
+      given-names: Supawat
+      affiliation: Chulalongkorn University
+    - family-names: Kunawisarut
+      given-names: Atichon
+      affiliation: Chulalongkorn University

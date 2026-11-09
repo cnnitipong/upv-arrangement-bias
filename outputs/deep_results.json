@@ -1,0 +1,65 @@
+{
+  "correction": {
+    "offset_kms": {
+      "Indirect": 0.237,
+      "Semi-Indirect": -0.055,
+      "Direct": 0.0
+    },
+    "indirect_offset_ci95": [
+      0.16,
+      0.295
+    ]
+  },
+  "reclassification": {
+    "doubtful_original": 35,
+    "doubtful_reclassified_after_correction": 10,
+    "pct_reclassified": 28.6,
+    "doubtful_remaining": 25,
+    "of_indirect_doubtful": 27,
+    "indirect_doubtful_reclassified": 10
+  },
+  "bias_cc": {
+    "Indirect": {
+      "mean": -0.143,
+      "lo": -0.205,
+      "hi": -0.082,
+      "n": 216
+    },
+    "Semi-Indirect": {
+      "mean": 0.149,
+      "lo": 0.05,
+      "hi": 0.243,
+      "n": 138
+    },
+    "Direct": {
+      "mean": 0.094,
+      "lo": 0.033,
+      "hi": 0.15,
+      "n": 108
+    }
+  },
+  "pairwise_diff": {
+    "Direct-Indirect": {
+      "diff": 0.848,
+      "lo": 0.748,
+      "hi": 0.943
+    },
+    "Direct-Semi-Indirect": {
+      "diff": 0.227,
+      "lo": 0.113,
+      "hi": 0.344
+    },
+    "Semi-Indirect-Indirect": {
+      "diff": 0.62,
+      "lo": 0.51,
+      "hi": 0.729
+    }
+  },
+  "effect_size": {
+    "eps2": 0.459,
+    "ci95": [
+      0.385,
+      0.531
+    ]
+  }
+}

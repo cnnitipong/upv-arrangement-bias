@@ -1,0 +1,1453 @@
+{
+ "step0_reproduction": {
+  "mean_vel": {
+   "Direct": 4.464,
+   "Semi-Indirect": 4.237,
+   "Indirect": 3.617
+  },
+  "gap_direct_minus_indirect": 0.848,
+  "column_centred_means": {
+   "Direct": 0.094,
+   "Semi-Indirect": 0.149,
+   "Indirect": -0.143
+  },
+  "delta_indirect_exact": 0.237,
+  "delta_semi_exact": -0.0549,
+  "chi2_3x4_arrangement_by_quality": 144.61,
+  "chi2_3x2_arrangement_by_doubtful": 14.59,
+  "chi2_144.6_is": "3x4 arrangement x quality table",
+  "table_3x4": {
+   "Direct": {
+    "Doubtful": 2,
+    "Medium": 2,
+    "Good": 45,
+    "Excellent": 59
+   },
+   "Semi-Indirect": {
+    "Doubtful": 6,
+    "Medium": 7,
+    "Good": 77,
+    "Excellent": 48
+   },
+   "Indirect": {
+    "Doubtful": 27,
+    "Medium": 39,
+    "Good": 148,
+    "Excellent": 2
+   }
+  },
+  "doubtful_direct": 2,
+  "doubtful_indirect": 27,
+  "doubtful_semi": 6,
+  "doubtful_total": 35,
+  "reclassified_at_0.237_-0.055": 10,
+  "R2": {
+   "arrangement": 0.376,
+   "column": 0.344,
+   "arrangement+column": 0.471,
+   "priority": 0.094,
+   "arrangement+priority": 0.422
+  },
+  "all_match": true
+ },
+ "step1_allocation": {
+  "n_columns": 26,
+  "n_with_direct": 12,
+  "n_with_semi": 24,
+  "n_with_indirect": 14,
+  "n_with_direct_and_indirect": 0,
+  "n_direct_plus_semi_only": 12,
+  "n_indirect_plus_semi_only": 12,
+  "n_indirect_only": 2,
+  "n_direct_only": 0,
+  "n_semi_only": 0,
+  "n_with_exactly_two_arrangements": 24,
+  "face_counts_by_column": {
+   "pair": 14,
+   "both": 10,
+   "single": 2
+  },
+  "points_per_column_min_max": [
+   9,
+   24
+  ]
+ },
+ "step2a_column_fixed_effects": {
+  "cluster_robust_t_df25": {
+   "Indirect_vs_Direct": {
+    "coef": -0.85,
+    "se": 0.125,
+    "ci95": [
+     -1.108,
+     -0.592
+    ]
+   },
+   "Semi_vs_Direct": {
+    "coef": -0.241,
+    "se": 0.064,
+    "ci95": [
+     -0.373,
+     -0.108
+    ]
+   },
+   "Indirect_vs_Semi": {
+    "coef": -0.61,
+    "se": 0.107,
+    "ci95": [
+     -0.831,
+     -0.388
+    ]
+   }
+  },
+  "cluster_robust_normal": {
+   "Indirect_vs_Direct": {
+    "coef": -0.85,
+    "se": 0.125,
+    "ci95": [
+     -1.096,
+     -0.605
+    ]
+   },
+   "Semi_vs_Direct": {
+    "coef": -0.241,
+    "se": 0.064,
+    "ci95": [
+     -0.367,
+     -0.114
+    ]
+   }
+  },
+  "iid_ols_se": {
+   "Indirect_vs_Direct": {
+    "coef": -0.85,
+    "se": 0.094,
+    "ci95": [
+     -1.035,
+     -0.666
+    ]
+   },
+   "Semi_vs_Direct": {
+    "coef": -0.241,
+    "se": 0.069,
+    "ci95": [
+     -0.377,
+     -0.104
+    ]
+   }
+  },
+  "n_clusters": 26,
+  "r2": 0.471,
+  "delta_to_direct_datum": {
+   "Direct": 0.0,
+   "Semi-Indirect": 0.241,
+   "Indirect": 0.85
+  }
+ },
+ "step2a_mixed_model": {
+  "Indirect_vs_Direct": {
+   "coef": -0.858,
+   "se": 0.073,
+   "ci95": [
+    -1.001,
+    -0.716
+   ]
+  },
+  "Semi_vs_Direct": {
+   "coef": -0.239,
+   "se": 0.063,
+   "ci95": [
+    -0.363,
+    -0.116
+   ]
+  },
+  "group_variance": 0.027,
+  "residual_variance": 0.204,
+  "icc_conditional_on_arrangement": 0.117,
+  "intercept_direct": 4.465,
+  "converged": true
+ },
+ "step2b_within_column_contrasts": {
+  "n_columns_semi_and_direct": 12,
+  "n_columns_semi_and_indirect": 12,
+  "mean_semi_minus_direct": {
+   "est": -0.235,
+   "ci95": [
+    -0.361,
+    -0.11
+   ]
+  },
+  "mean_semi_minus_indirect": {
+   "est": 0.547,
+   "ci95": [
+    0.256,
+    0.787
+   ]
+  },
+  "chained_direct_equivalent_indirect_offset": {
+   "est": 0.782,
+   "ci95": [
+    0.467,
+    1.054
+   ],
+   "note": "(S-I) + (D-S) using column-level means; equals the amount to ADD to indirect readings"
+  }
+ },
+ "step2c_bootstrap": {
+  "raw_direct_minus_indirect": {
+   "estimate": 0.848,
+   "cluster_boot_ci95": [
+    0.673,
+    1.009
+   ],
+   "point_boot_ci95": [
+    0.751,
+    0.941
+   ],
+   "ci_width_ratio_cluster_over_point": 1.768
+  },
+  "epsilon_squared": {
+   "estimate": 0.459,
+   "cluster_boot_ci95": [
+    0.325,
+    0.575
+   ],
+   "point_boot_ci95": [
+    0.384,
+    0.532
+   ],
+   "ci_width_ratio_cluster_over_point": 1.689
+  },
+  "RR_doubtful_indirect_vs_direct_haldane": {
+   "estimate": 5.513,
+   "cluster_boot_ci95": [
+    2.291,
+    30.851
+   ],
+   "point_boot_ci95": [
+    2.217,
+    31.333
+   ],
+   "ci_width_ratio_cluster_over_point": 0.981
+  },
+  "colcentred_Direct": {
+   "estimate": 0.094,
+   "cluster_boot_ci95": [
+    0.045,
+    0.144
+   ],
+   "point_boot_ci95": [
+    0.035,
+    0.15
+   ],
+   "ci_width_ratio_cluster_over_point": 0.861
+  },
+  "colcentred_Semi": {
+   "estimate": 0.149,
+   "cluster_boot_ci95": [
+    0.0,
+    0.305
+   ],
+   "point_boot_ci95": [
+    0.051,
+    0.239
+   ],
+   "ci_width_ratio_cluster_over_point": 1.622
+  },
+  "colcentred_Indirect": {
+   "estimate": -0.143,
+   "cluster_boot_ci95": [
+    -0.185,
+    -0.084
+   ],
+   "point_boot_ci95": [
+    -0.207,
+    -0.082
+   ],
+   "ci_width_ratio_cluster_over_point": 0.808
+  },
+  "delta_indirect_colcentred": {
+   "estimate": 0.237,
+   "cluster_boot_ci95": [
+    0.161,
+    0.304
+   ],
+   "point_boot_ci95": [
+    0.152,
+    0.321
+   ],
+   "ci_width_ratio_cluster_over_point": 0.846
+  },
+  "delta_semi_colcentred": {
+   "estimate": -0.055,
+   "cluster_boot_ci95": [
+    -0.23,
+    0.115
+   ],
+   "point_boot_ci95": [
+    -0.163,
+    0.053
+   ],
+   "ci_width_ratio_cluster_over_point": 1.597
+  },
+  "RR_doubtful_indirect_vs_direct_raw_finite_only": {
+   "estimate": 6.75,
+   "cluster_boot_ci95": [
+    2.438,
+    18.2
+   ],
+   "point_boot_ci95": [
+    2.29,
+    17.232
+   ],
+   "frac_reps_with_zero_direct_doubtful_cluster": 0.124,
+   "frac_reps_with_zero_direct_doubtful_point": 0.129
+  },
+  "reps": {
+   "cluster": 10000,
+   "point": 2000
+  }
+ },
+ "step2d_notes": "No column was measured with both direct and indirect arrangements (0 of 26). The column-centred indirect mean is computed against a column mean that already contains the arrangement mix of that column (Indirect points sit with Semi-direct points or alone; Direct points sit with Semi-direct points), so the column-centred estimate (delta_indirect = 0.237) is attenuated relative to the within-column contrast. The column fixed-effects estimate uses only within-column differences and is identified through the semi-direct arrangement as a bridge (additivity assumption: the arrangement offset is the same in every column): indirect vs semi within 12 columns, semi vs direct within 12 other columns, chained.",
+ "step3_variance": {
+  "R2_column_only": 0.344,
+  "R2_arrangement_only": 0.376,
+  "R2_arrangement_plus_column": 0.471,
+  "increment_arrangement_beyond_column": 0.127,
+  "increment_column_beyond_arrangement": 0.096,
+  "ICC_between_column_SS_share": 0.344,
+  "shared_variance_arrangement_and_column": 0.249,
+  "partial_eta2_arrangement_given_column": 0.194,
+  "two_arrangement_columns_only": {
+   "n_columns": 24,
+   "n_points": 444,
+   "R2_column": 0.328,
+   "R2_arrangement": 0.37,
+   "R2_arr_plus_col": 0.467,
+   "increment_arrangement_beyond_column": 0.139,
+   "partial_eta2_arrangement_given_column": 0.207,
+   "F_arrangement_given_column": 54.398,
+   "p": 1.01e-21
+  }
+ },
+ "step4_risk": {
+  "counts": {
+   "indirect_doubtful": 27,
+   "indirect_n": 216,
+   "direct_doubtful": 2,
+   "direct_n": 108
+  },
+  "risk_indirect": 0.125,
+  "risk_direct": 0.019,
+  "RR": 6.75,
+  "RR_wald_log_ci95": [
+   1.635,
+   27.859
+  ],
+  "RR_score_ci95_farrington_manning": [
+   1.839,
+   25.488
+  ],
+  "OR_conditional_exact": 7.54,
+  "OR_exact_ci95": [
+   1.834,
+   66.693
+  ],
+  "fisher_exact_p": 0.000802,
+  "RR_cluster_bootstrap_haldane": [
+   2.291,
+   30.851
+  ],
+  "RR_point_bootstrap_haldane": [
+   2.217,
+   31.333
+  ],
+  "residual_after_correction": {
+   "delta_0.237_-0.055": {
+    "delta": {
+     "Direct": 0.0,
+     "Semi-Indirect": -0.055,
+     "Indirect": 0.237
+    },
+    "doubtful_by_arrangement": {
+     "Direct": 2,
+     "Semi-Indirect": 6,
+     "Indirect": 17
+    },
+    "residual_RR_indirect_vs_direct": 4.25,
+    "residual_RR_indirect_vs_semi": 1.81
+   },
+   "FE": {
+    "delta": {
+     "Direct": 0.0,
+     "Semi-Indirect": 0.241,
+     "Indirect": 0.85
+    },
+    "doubtful_by_arrangement": {
+     "Direct": 2,
+     "Semi-Indirect": 5,
+     "Indirect": 0
+    },
+    "residual_RR_indirect_vs_direct": 0.0,
+    "residual_RR_indirect_vs_semi": 0.0
+   }
+  }
+ },
+ "step5_reclassification_sensitivity": {
+  "0.16": {
+   "delta": {
+    "Direct": 0.0,
+    "Semi-Indirect": -0.055,
+    "Indirect": 0.16
+   },
+   "doubtful_before": {
+    "Direct": 2,
+    "Semi-Indirect": 6,
+    "Indirect": 27
+   },
+   "doubtful_after": {
+    "Direct": 2,
+    "Semi-Indirect": 6,
+    "Indirect": 17
+   },
+   "n_doubtful_before": 35,
+   "n_doubtful_after": 25,
+   "reclassified_out_of_doubtful": 10,
+   "newly_doubtful": 0,
+   "n_changed_class_any": 47,
+   "class_counts_before": {
+    "Direct": {
+     "Doubtful": 2,
+     "Medium": 2,
+     "Good": 45,
+     "Excellent": 59
+    },
+    "Semi-Indirect": {
+     "Doubtful": 6,
+     "Medium": 7,
+     "Good": 77,
+     "Excellent": 48
+    },
+    "Indirect": {
+     "Doubtful": 27,
+     "Medium": 39,
+     "Good": 148,
+     "Excellent": 2
+    }
+   },
+   "class_counts_after": {
+    "Direct": {
+     "Doubtful": 2,
+     "Medium": 2,
+     "Good": 44,
+     "Excellent": 60
+    },
+    "Semi-Indirect": {
+     "Doubtful": 6,
+     "Medium": 7,
+     "Good": 89,
+     "Excellent": 36
+    },
+    "Indirect": {
+     "Doubtful": 17,
+     "Medium": 28,
+     "Good": 166,
+     "Excellent": 5
+    }
+   },
+   "excellent_before_total": 109,
+   "excellent_after_total": 101,
+   "transitions_by_arrangement": {
+    "Doubtful->Medium": {
+     "Direct": 0,
+     "Semi-Indirect": 0,
+     "Indirect": 10
+    },
+    "Medium->Good": {
+     "Direct": 0,
+     "Semi-Indirect": 0,
+     "Indirect": 21
+    },
+    "Good->Excellent": {
+     "Direct": 1,
+     "Semi-Indirect": 0,
+     "Indirect": 3
+    },
+    "Excellent->Good": {
+     "Direct": 0,
+     "Semi-Indirect": 12,
+     "Indirect": 0
+    }
+   }
+  },
+  "0.237": {
+   "delta": {
+    "Direct": 0.0,
+    "Semi-Indirect": -0.055,
+    "Indirect": 0.237
+   },
+   "doubtful_before": {
+    "Direct": 2,
+    "Semi-Indirect": 6,
+    "Indirect": 27
+   },
+   "doubtful_after": {
+    "Direct": 2,
+    "Semi-Indirect": 6,
+    "Indirect": 17
+   },
+   "n_doubtful_before": 35,
+   "n_doubtful_after": 25,
+   "reclassified_out_of_doubtful": 10,
+   "newly_doubtful": 0,
+   "n_changed_class_any": 59,
+   "class_counts_before": {
+    "Direct": {
+     "Doubtful": 2,
+     "Medium": 2,
+     "Good": 45,
+     "Excellent": 59
+    },
+    "Semi-Indirect": {
+     "Doubtful": 6,
+     "Medium": 7,
+     "Good": 77,
+     "Excellent": 48
+    },
+    "Indirect": {
+     "Doubtful": 27,
+     "Medium": 39,
+     "Good": 148,
+     "Excellent": 2
+    }
+   },
+   "class_counts_after": {
+    "Direct": {
+     "Doubtful": 2,
+     "Medium": 2,
+     "Good": 44,
+     "Excellent": 60
+    },
+    "Semi-Indirect": {
+     "Doubtful": 6,
+     "Medium": 7,
+     "Good": 89,
+     "Excellent": 36
+    },
+    "Indirect": {
+     "Doubtful": 17,
+     "Medium": 23,
+     "Good": 164,
+     "Excellent": 12
+    }
+   },
+   "excellent_before_total": 109,
+   "excellent_after_total": 108,
+   "transitions_by_arrangement": {
+    "Doubtful->Medium": {
+     "Direct": 0,
+     "Semi-Indirect": 0,
+     "Indirect": 10
+    },
+    "Medium->Good": {
+     "Direct": 0,
+     "Semi-Indirect": 0,
+     "Indirect": 26
+    },
+    "Good->Excellent": {
+     "Direct": 1,
+     "Semi-Indirect": 0,
+     "Indirect": 10
+    },
+    "Excellent->Good": {
+     "Direct": 0,
+     "Semi-Indirect": 12,
+     "Indirect": 0
+    }
+   }
+  },
+  "0.30": {
+   "delta": {
+    "Direct": 0.0,
+    "Semi-Indirect": -0.055,
+    "Indirect": 0.3
+   },
+   "doubtful_before": {
+    "Direct": 2,
+    "Semi-Indirect": 6,
+    "Indirect": 27
+   },
+   "doubtful_after": {
+    "Direct": 2,
+    "Semi-Indirect": 6,
+    "Indirect": 15
+   },
+   "n_doubtful_before": 35,
+   "n_doubtful_after": 23,
+   "reclassified_out_of_doubtful": 12,
+   "newly_doubtful": 0,
+   "n_changed_class_any": 68,
+   "class_counts_before": {
+    "Direct": {
+     "Doubtful": 2,
+     "Medium": 2,
+     "Good": 45,
+     "Excellent": 59
+    },
+    "Semi-Indirect": {
+     "Doubtful": 6,
+     "Medium": 7,
+     "Good": 77,
+     "Excellent": 48
+    },
+    "Indirect": {
+     "Doubtful": 27,
+     "Medium": 39,
+     "Good": 148,
+     "Excellent": 2
+    }
+   },
+   "class_counts_after": {
+    "Direct": {
+     "Doubtful": 2,
+     "Medium": 2,
+     "Good": 44,
+     "Excellent": 60
+    },
+    "Semi-Indirect": {
+     "Doubtful": 6,
+     "Medium": 7,
+     "Good": 89,
+     "Excellent": 36
+    },
+    "Indirect": {
+     "Doubtful": 15,
+     "Medium": 20,
+     "Good": 167,
+     "Excellent": 14
+    }
+   },
+   "excellent_before_total": 109,
+   "excellent_after_total": 110,
+   "transitions_by_arrangement": {
+    "Doubtful->Medium": {
+     "Direct": 0,
+     "Semi-Indirect": 0,
+     "Indirect": 12
+    },
+    "Medium->Good": {
+     "Direct": 0,
+     "Semi-Indirect": 0,
+     "Indirect": 31
+    },
+    "Good->Excellent": {
+     "Direct": 1,
+     "Semi-Indirect": 0,
+     "Indirect": 12
+    },
+    "Excellent->Good": {
+     "Direct": 0,
+     "Semi-Indirect": 12,
+     "Indirect": 0
+    }
+   }
+  },
+  "FE": {
+   "delta": {
+    "Direct": 0.0,
+    "Semi-Indirect": 0.241,
+    "Indirect": 0.85
+   },
+   "doubtful_before": {
+    "Direct": 2,
+    "Semi-Indirect": 6,
+    "Indirect": 27
+   },
+   "doubtful_after": {
+    "Direct": 2,
+    "Semi-Indirect": 5,
+    "Indirect": 0
+   },
+   "n_doubtful_before": 35,
+   "n_doubtful_after": 7,
+   "reclassified_out_of_doubtful": 28,
+   "newly_doubtful": 0,
+   "n_changed_class_any": 229,
+   "class_counts_before": {
+    "Direct": {
+     "Doubtful": 2,
+     "Medium": 2,
+     "Good": 45,
+     "Excellent": 59
+    },
+    "Semi-Indirect": {
+     "Doubtful": 6,
+     "Medium": 7,
+     "Good": 77,
+     "Excellent": 48
+    },
+    "Indirect": {
+     "Doubtful": 27,
+     "Medium": 39,
+     "Good": 148,
+     "Excellent": 2
+    }
+   },
+   "class_counts_after": {
+    "Direct": {
+     "Doubtful": 2,
+     "Medium": 2,
+     "Good": 44,
+     "Excellent": 60
+    },
+    "Semi-Indirect": {
+     "Doubtful": 5,
+     "Medium": 5,
+     "Good": 40,
+     "Excellent": 88
+    },
+    "Indirect": {
+     "Doubtful": 0,
+     "Medium": 13,
+     "Good": 83,
+     "Excellent": 120
+    }
+   },
+   "excellent_before_total": 109,
+   "excellent_after_total": 268,
+   "transitions_by_arrangement": {
+    "Doubtful->Medium": {
+     "Direct": 0,
+     "Semi-Indirect": 1,
+     "Indirect": 13
+    },
+    "Doubtful->Good": {
+     "Direct": 0,
+     "Semi-Indirect": 0,
+     "Indirect": 14
+    },
+    "Medium->Good": {
+     "Direct": 0,
+     "Semi-Indirect": 3,
+     "Indirect": 39
+    },
+    "Good->Excellent": {
+     "Direct": 1,
+     "Semi-Indirect": 40,
+     "Indirect": 118
+    }
+   }
+  }
+ },
+ "step5_note": "Excellent total changes at delta=+0.237/-0.055 because (i) semi-direct points are shifted down by 0.055 km/s and those just above 4.5 km/s fall to Good (Excellent->Good by arrangement: {'Direct': 0, 'Semi-Indirect': 12, 'Indirect': 0}), and (ii) indirect points are shifted up by 0.237 and those between 4.263 and 4.5 km/s rise to Excellent (Good->Excellent by arrangement: {'Direct': 1, 'Semi-Indirect': 0, 'Indirect': 10}). Direct points are unchanged. Stored quality differs from the threshold rule applied to raw velocity for 1 point(s): C1-1B : C1.F AB1 v=4.594 stored Good (so the Direct Good->Excellent transition above is this record, not a shift).",
+ "step6_rules": {
+  "delta_0.237": {
+   "A_doubtful": {
+    "points_before": 35,
+    "points_after": 25,
+    "columns_before": 16,
+    "columns_after": 15
+   },
+   "B_doubtful_or_medium": {
+    "points_before": 83,
+    "points_after": 57,
+    "columns_before": 20,
+    "columns_after": 20
+   },
+   "C_column_ge_10pct_doubtful": {
+    "columns_before": 6,
+    "columns_after": 6,
+    "points_in_flagged_columns_before": 94,
+    "points_in_flagged_columns_after": 94,
+    "doubtful_points_before": 35,
+    "doubtful_points_after": 25
+   },
+   "C_column_ge_20pct_doubtful": {
+    "columns_before": 5,
+    "columns_after": 3,
+    "points_in_flagged_columns_before": 70,
+    "points_in_flagged_columns_after": 33,
+    "doubtful_points_before": 35,
+    "doubtful_points_after": 25
+   }
+  },
+  "FE": {
+   "A_doubtful": {
+    "points_before": 35,
+    "points_after": 7,
+    "columns_before": 16,
+    "columns_after": 5
+   },
+   "B_doubtful_or_medium": {
+    "points_before": 83,
+    "points_after": 27,
+    "columns_before": 20,
+    "columns_after": 13
+   },
+   "C_column_ge_10pct_doubtful": {
+    "columns_before": 6,
+    "columns_after": 1,
+    "points_in_flagged_columns_before": 94,
+    "points_in_flagged_columns_after": 15,
+    "doubtful_points_before": 35,
+    "doubtful_points_after": 7
+   },
+   "C_column_ge_20pct_doubtful": {
+    "columns_before": 5,
+    "columns_after": 1,
+    "points_in_flagged_columns_before": 70,
+    "points_in_flagged_columns_after": 15,
+    "doubtful_points_before": 35,
+    "doubtful_points_after": 7
+   }
+  }
+ },
+ "step7_subgroups": {
+  "pair": {
+   "n": 264,
+   "mean_by_arr": {
+    "Direct": 4.464,
+    "Semi-Indirect": 4.237,
+    "Indirect": 3.914
+   },
+   "n_by_arr": {
+    "Direct": 108,
+    "Semi-Indirect": 138,
+    "Indirect": 18
+   },
+   "raw_direct_minus_indirect": 0.551,
+   "raw_direct_minus_semi": 0.227,
+   "raw_semi_minus_indirect": 0.323,
+   "colcentred_direct_minus_indirect": -0.02,
+   "FE_indirect_vs_direct": 0.132,
+   "FE_semi_vs_direct": -0.241
+  },
+  "single": {
+   "n": 198,
+   "mean_by_arr": {
+    "Direct": null,
+    "Semi-Indirect": null,
+    "Indirect": 3.59
+   },
+   "n_by_arr": {
+    "Direct": 0,
+    "Semi-Indirect": 0,
+    "Indirect": 198
+   },
+   "raw_direct_minus_indirect": null,
+   "raw_direct_minus_semi": null,
+   "raw_semi_minus_indirect": null,
+   "colcentred_direct_minus_indirect": null,
+   "FE_error": "specified level 'Direct' not found"
+  },
+  "face_composition_by_column": {
+   "pair": 14,
+   "both": 10,
+   "single": 2
+  },
+  "note_face_confounding": "Face type is confounded with arrangement: all 198 single-face points are Indirect (columns: 12); pair-face points are Direct 108, Semi 138, Indirect 18. An arrangement contrast within single-face points is impossible; within pair-face the Indirect arm has only 18 points (columns: 2), so the pair-face Indirect-vs-Direct contrast is not reliable.",
+  "note_cross_section": "Cross-section type (e.g. square/rectangular/circular, size) is not recorded in master_dataset.csv, so arrangement contrasts cannot be stratified by cross-section.",
+  "rebound_correlation": {
+   "r_vel_rebN_overall": 0.226,
+   "r_by_arrangement": {
+    "Direct": 0.097,
+    "Semi-Indirect": 0.097,
+    "Indirect": 0.16
+   },
+   "r_corrected_0.237": 0.214,
+   "r_corrected_FE": 0.125,
+   "r_corrected_by_arr_0.237": {
+    "Direct": 0.097,
+    "Semi-Indirect": 0.097,
+    "Indirect": 0.16
+   }
+  },
+  "column_CoV": {
+   "mean_CoV_raw": 11.973,
+   "mean_CoV_0.237": 11.19,
+   "mean_CoV_FE": 9.814,
+   "corr_CoV_vs_colmean_raw": -0.857,
+   "corr_CoV_vs_colmean_0.237": -0.799,
+   "corr_CoV_vs_colmean_FE": -0.708
+  }
+ },
+ "step8_triage": {
+  "original": {
+   "mahalanobis_threshold": 2.663,
+   "n_flagged": 12,
+   "dbscan_noise": 9,
+   "dbscan_clusters": 1,
+   "dbscan_rows_used": 447,
+   "note_dbscan_rows": "rows with NaN gx/gy (column 'C1', 15 points) are dropped before DBSCAN, as in upv_analysis.py"
+  },
+  "corrected_0.237": {
+   "mahalanobis_threshold": 2.774,
+   "n_flagged": 12,
+   "overlap_with_original_12": 9,
+   "kept_original": [
+    "C1-1A:C1.C|B2",
+    "C1-1A:C1.C|B9",
+    "C1-1B:C1.F|AC3",
+    "C1-3A:C1-D|C1",
+    "C1-7A:C1-D|C6",
+    "C1.1B:C1.F|A1",
+    "C1.1B:C1.F|B2",
+    "C1.1B:C1.F|B3",
+    "C1.7A:C1-B|DB1"
+   ],
+   "newly_flagged": [
+    "C1-1A:C1.E|AD1",
+    "C1-1B:C1.F|AD1",
+    "C1-4A:C1-B|DA2"
+   ],
+   "dropped_from_original": [
+    "C1-8A:C1.E|B2",
+    "C1.1A:C1.E|A1",
+    "C1.3A:C1.C|A3"
+   ],
+   "dbscan_noise": 13,
+   "dbscan_clusters": 1,
+   "dbscan_overlap_with_original_dbscan_noise": 9,
+   "dbscan_overlap_with_original_12_mahalanobis": 6,
+   "dbscan_noise_keys": [
+    "C1-1A:C1.C|B2",
+    "C1-1A:C1.C|B9",
+    "C1-3A:C1-D|C1",
+    "C1-4A:C1-B|DA2",
+    "C1-5A:C1.E|AD2",
+    "C1-7A:C1-D|C6",
+    "C1-8A:C1.E|B1",
+    "C1-8A:C1.E|B2",
+    "C1.7A:C1-B|CA2",
+    "C1.7A:C1-B|CD2",
+    "C1.7A:C1-B|CD4",
+    "C1.7A:C1-B|CD5",
+    "C1.7A:C1-B|DB1"
+   ]
+  },
+  "corrected_FE": {
+   "mahalanobis_threshold": 3.025,
+   "n_flagged": 12,
+   "overlap_with_original_12": 5,
+   "kept_original": [
+    "C1-1B:C1.F|AC3",
+    "C1-7A:C1-D|C6",
+    "C1.1B:C1.F|A1",
+    "C1.1B:C1.F|B2",
+    "C1.7A:C1-B|DB1"
+   ],
+   "newly_flagged": [
+    "C1-1A:C1.E|AB8",
+    "C1-1A:C1.E|AD1",
+    "C1-1B:C1.F|AB3",
+    "C1-1B:C1.F|AD1",
+    "C1-1B:C1.G|AB8",
+    "C1-4A:C1-B|DA2",
+    "C1.1A:C1.E|AD1"
+   ],
+   "dropped_from_original": [
+    "C1-1A:C1.C|B2",
+    "C1-1A:C1.C|B9",
+    "C1-3A:C1-D|C1",
+    "C1-8A:C1.E|B2",
+    "C1.1A:C1.E|A1",
+    "C1.1B:C1.F|B3",
+    "C1.3A:C1.C|A3"
+   ],
+   "dbscan_noise": 16,
+   "dbscan_clusters": 1,
+   "dbscan_overlap_with_original_dbscan_noise": 5,
+   "dbscan_overlap_with_original_12_mahalanobis": 4,
+   "dbscan_noise_keys": [
+    "C1-1A:C1.E|AB8",
+    "C1-1A:C1.E|AD1",
+    "C1-1B:C1.F|AB3",
+    "C1-1B:C1.F|AC3",
+    "C1-1B:C1.F|AD1",
+    "C1-1B:C1.G|AB8",
+    "C1-3A:C1-D|C1",
+    "C1-4A:C1-B|DA2",
+    "C1-5A:C1.E|AD2",
+    "C1-7A:C1-D|C6",
+    "C1-8A:C1.C|BD1",
+    "C1-8A:C1.E|B1",
+    "C1.7A:C1-B|CA2",
+    "C1.7A:C1-B|CD4",
+    "C1.7A:C1-B|CD5",
+    "C1.7A:C1-B|DB1"
+   ]
+  },
+  "original_dbscan_noise_keys": [
+   "C1-1A:C1.C|B2",
+   "C1-1A:C1.C|B9",
+   "C1-3A:C1-D|C1",
+   "C1-7A:C1-D|C6",
+   "C1-8A:C1.E|B1",
+   "C1-8A:C1.E|B2",
+   "C1.7A:C1-B|CD2",
+   "C1.7A:C1-B|CD5",
+   "C1.7A:C1-B|DB1"
+  ],
+  "original_dbscan_overlap_with_original_12": 6,
+  "original_12_keys": [
+   "C1-1A:C1.C|B2",
+   "C1-1A:C1.C|B9",
+   "C1-1B:C1.F|AC3",
+   "C1-3A:C1-D|C1",
+   "C1-7A:C1-D|C6",
+   "C1-8A:C1.E|B2",
+   "C1.1A:C1.E|A1",
+   "C1.1B:C1.F|A1",
+   "C1.1B:C1.F|B2",
+   "C1.1B:C1.F|B3",
+   "C1.3A:C1.C|A3",
+   "C1.7A:C1-B|DB1"
+  ]
+ },
+ "step8_anomaly_table": [
+  {
+   "col": "C1-7A : C1-D",
+   "point": "C6",
+   "vel": 2.316,
+   "vel_corr_0.237": 2.553,
+   "rebN": 61,
+   "arrangement": "Indirect",
+   "quality_raw": "Doubtful",
+   "quality_corrected": "Doubtful",
+   "priority": 3,
+   "dbscan_outlier_raw": "yes",
+   "mahalanobis": 3.725
+  },
+  {
+   "col": "C1-3A : C1-D",
+   "point": "C1",
+   "vel": 2.68,
+   "vel_corr_0.237": 2.917,
+   "rebN": 61,
+   "arrangement": "Indirect",
+   "quality_raw": "Doubtful",
+   "quality_corrected": "Doubtful",
+   "priority": 3,
+   "dbscan_outlier_raw": "yes",
+   "mahalanobis": 3.192
+  },
+  {
+   "col": "C1.1B : C1.F",
+   "point": "B2",
+   "vel": 2.172,
+   "vel_corr_0.237": 2.409,
+   "rebN": 55,
+   "arrangement": "Indirect",
+   "quality_raw": "Doubtful",
+   "quality_corrected": "Doubtful",
+   "priority": 2,
+   "dbscan_outlier_raw": "no",
+   "mahalanobis": 3.041
+  },
+  {
+   "col": "C1.1B : C1.F",
+   "point": "A1",
+   "vel": 2.287,
+   "vel_corr_0.237": 2.524,
+   "rebN": 52,
+   "arrangement": "Indirect",
+   "quality_raw": "Doubtful",
+   "quality_corrected": "Doubtful",
+   "priority": 2,
+   "dbscan_outlier_raw": "no",
+   "mahalanobis": 3.039
+  },
+  {
+   "col": "C1-1A : C1.C",
+   "point": "B9",
+   "vel": 2.375,
+   "vel_corr_0.237": 2.612,
+   "rebN": 58,
+   "arrangement": "Indirect",
+   "quality_raw": "Doubtful",
+   "quality_corrected": "Doubtful",
+   "priority": 1,
+   "dbscan_outlier_raw": "yes",
+   "mahalanobis": 2.978
+  },
+  {
+   "col": "C1-1A : C1.C",
+   "point": "B2",
+   "vel": 2.247,
+   "vel_corr_0.237": 2.484,
+   "rebN": 56,
+   "arrangement": "Indirect",
+   "quality_raw": "Doubtful",
+   "quality_corrected": "Doubtful",
+   "priority": 1,
+   "dbscan_outlier_raw": "yes",
+   "mahalanobis": 2.959
+  },
+  {
+   "col": "C1-8A : C1.E",
+   "point": "B2",
+   "vel": 2.761,
+   "vel_corr_0.237": 2.998,
+   "rebN": 60,
+   "arrangement": "Indirect",
+   "quality_raw": "Doubtful",
+   "quality_corrected": "Doubtful",
+   "priority": 3,
+   "dbscan_outlier_raw": "yes",
+   "mahalanobis": 2.798
+  },
+  {
+   "col": "C1.1B : C1.F",
+   "point": "B3",
+   "vel": 2.508,
+   "vel_corr_0.237": 2.745,
+   "rebN": 52,
+   "arrangement": "Indirect",
+   "quality_raw": "Doubtful",
+   "quality_corrected": "Doubtful",
+   "priority": 2,
+   "dbscan_outlier_raw": "no",
+   "mahalanobis": 2.733
+  },
+  {
+   "col": "C1.3A : C1.C",
+   "point": "A3",
+   "vel": 2.698,
+   "vel_corr_0.237": 2.935,
+   "rebN": 51,
+   "arrangement": "Indirect",
+   "quality_raw": "Doubtful",
+   "quality_corrected": "Doubtful",
+   "priority": 2,
+   "dbscan_outlier_raw": "no",
+   "mahalanobis": 2.701
+  },
+  {
+   "col": "C1.7A : C1-B",
+   "point": "DB1",
+   "vel": 2.386,
+   "vel_corr_0.237": 2.331,
+   "rebN": 55,
+   "arrangement": "Semi-Indirect",
+   "quality_raw": "Doubtful",
+   "quality_corrected": "Doubtful",
+   "priority": 3,
+   "dbscan_outlier_raw": "yes",
+   "mahalanobis": 2.695
+  },
+  {
+   "col": "C1-1B : C1.F",
+   "point": "AC3",
+   "vel": 2.752,
+   "vel_corr_0.237": 2.697,
+   "rebN": 59,
+   "arrangement": "Semi-Indirect",
+   "quality_raw": "Doubtful",
+   "quality_corrected": "Doubtful",
+   "priority": 1,
+   "dbscan_outlier_raw": "no",
+   "mahalanobis": 2.683
+  },
+  {
+   "col": "C1.1A : C1.E",
+   "point": "A1",
+   "vel": 2.398,
+   "vel_corr_0.237": 2.635,
+   "rebN": 54,
+   "arrangement": "Indirect",
+   "quality_raw": "Doubtful",
+   "quality_corrected": "Doubtful",
+   "priority": 2,
+   "dbscan_outlier_raw": "no",
+   "mahalanobis": 2.681
+  }
+ ],
+ "step8_concern_index": {
+  "original": {
+   "spearman_rho_with_priority": 0.472,
+   "perm_p": 0.017,
+   "top5_overlap_with_original": 5,
+   "rank_of_original_worst_column": 1,
+   "worst_column": "C1-1A : C1.C",
+   "top5": [
+    "C1-1A : C1.C",
+    "C1-1B : C1-F",
+    "C1.7A : C1-B",
+    "C1.1A : C1.E",
+    "C1.1B : C1.F"
+   ],
+   "top5_columns_original_ranking": [
+    "C1-1A : C1.C",
+    "C1-1B : C1-F",
+    "C1.7A : C1-B",
+    "C1.1A : C1.E",
+    "C1.1B : C1.F"
+   ],
+   "worst_column_original": "C1-1A : C1.C"
+  },
+  "V1_corrected_velocity_recomputed_doubtful": {
+   "spearman_rho_with_priority": 0.545,
+   "perm_p": 0.005,
+   "top5_overlap_with_original": 4,
+   "rank_of_original_worst_column": 1,
+   "worst_column": "C1-1A : C1.C",
+   "top5": [
+    "C1-1A : C1.C",
+    "C1-1B : C1-F",
+    "C1-1B : C1.F",
+    "C1.7A : C1-B",
+    "C1.1A : C1.E"
+   ]
+  },
+  "V2_no_doubtful_fraction_corrected_mean_CoV": {
+   "spearman_rho_with_priority": 0.528,
+   "perm_p": 0.007,
+   "top5_overlap_with_original": 4,
+   "rank_of_original_worst_column": 1,
+   "worst_column": "C1-1A : C1.C",
+   "top5": [
+    "C1-1A : C1.C",
+    "C1.7A : C1-B",
+    "C1-1B : C1-F",
+    "C1.1A : C1.E",
+    "C1-1B : C1.F"
+   ]
+  },
+  "weights": {
+   "(0.5, 0.25, 0.25)": {
+    "spearman_rho_with_priority": 0.491,
+    "perm_p": 0.012,
+    "top5_overlap_with_original": 5,
+    "rank_of_original_worst_column": 1,
+    "worst_column": "C1-1A : C1.C",
+    "top5": [
+     "C1-1A : C1.C",
+     "C1-1B : C1-F",
+     "C1.7A : C1-B",
+     "C1.1A : C1.E",
+     "C1.1B : C1.F"
+    ]
+   },
+   "(0.25, 0.5, 0.25)": {
+    "spearman_rho_with_priority": 0.48,
+    "perm_p": 0.015,
+    "top5_overlap_with_original": 5,
+    "rank_of_original_worst_column": 1,
+    "worst_column": "C1-1A : C1.C",
+    "top5": [
+     "C1-1A : C1.C",
+     "C1-1B : C1-F",
+     "C1.7A : C1-B",
+     "C1.1B : C1.F",
+     "C1.1A : C1.E"
+    ]
+   },
+   "(0.25, 0.25, 0.5)": {
+    "spearman_rho_with_priority": 0.484,
+    "perm_p": 0.014,
+    "top5_overlap_with_original": 5,
+    "rank_of_original_worst_column": 1,
+    "worst_column": "C1-1A : C1.C",
+    "top5": [
+     "C1-1A : C1.C",
+     "C1-1B : C1-F",
+     "C1.7A : C1-B",
+     "C1.1A : C1.E",
+     "C1.1B : C1.F"
+    ]
+   },
+   "(0.5, 0.5, 0.0)": {
+    "spearman_rho_with_priority": 0.501,
+    "perm_p": 0.011,
+    "top5_overlap_with_original": 5,
+    "rank_of_original_worst_column": 1,
+    "worst_column": "C1-1A : C1.C",
+    "top5": [
+     "C1-1A : C1.C",
+     "C1-1B : C1-F",
+     "C1.1B : C1.F",
+     "C1.7A : C1-B",
+     "C1.1A : C1.E"
+    ]
+   }
+  }
+ },
+ "step9_classifier_clustering": {
+  "features_logistic": [
+   "gx",
+   "gy",
+   "priority",
+   "col_mean_excl",
+   "m_Direct",
+   "m_Indirect",
+   "m_Semi-Indirect",
+   "f_pair",
+   "f_single"
+  ],
+  "standardisation": "z-score with population SD (ddof=0)+1e-9, fitted on all 462 rows before CV (as in script)",
+  "model": "numpy L2 logistic regression (l2=1.0, lr=0.1, 4000 full-batch epochs), target = Doubtful",
+  "original_cv": {
+   "type": "plain 5-fold on a random permutation of points (np.array_split of RNG.permutation), NOT grouped by column; same-column points can sit in train and test, and col_mean_excl is a leave-one-out column mean computed from the full data",
+   "seed": "numpy default_rng(42) (here a fresh stream; the submitted script drew the permutation from a shared generator after other steps)",
+   "per_fold_auc": [
+    0.705,
+    0.765,
+    0.722,
+    0.734,
+    0.662
+   ],
+   "mean": 0.718,
+   "sd": 0.034,
+   "stored_submitted_value": {
+    "mean": 0.7038,
+    "sd": 0.0475
+   }
+  },
+  "group_kfold_by_column": {
+   "per_fold_auc": [
+    0.677,
+    0.539,
+    0.648,
+    0.618,
+    0.755
+   ],
+   "mean": 0.647,
+   "sd": 0.071,
+   "columns_per_test_fold": [
+    5,
+    5,
+    5,
+    5,
+    6
+   ],
+   "note": "sklearn GroupKFold(5) on column id; deterministic"
+  },
+  "repeated_random_column_grouped_5fold_20x": {
+   "mean": 0.63,
+   "sd_across_repeats": 0.035
+  },
+  "kmeans_silhouette_k2_6": {
+   "2": 0.314,
+   "3": 0.299,
+   "4": 0.306,
+   "5": 0.31,
+   "6": 0.313
+  },
+  "kmeans_best_k": 2,
+  "kmeans_stored_submitted": {
+   "2": 0.3138,
+   "3": 0.2994,
+   "4": 0.3021,
+   "5": 0.3098,
+   "6": 0.3103
+  },
+  "feature_lists": {
+   "PCA": "['vel', 'rebN', 'gx', 'gy'] z-scored (ddof=1), rows with NaN dropped -> 447 rows; SVD",
+   "kmeans": "same standardised ['vel', 'rebN', 'gx', 'gy'], own numpy k-means, 10 restarts, 200 iterations, seed 42",
+   "DBSCAN": "same standardised ['vel', 'rebN', 'gx', 'gy'], eps=1.0, minpts=5 (<= eps, neighbourhood includes the point itself)",
+   "Mahalanobis": "raw [vel, rebN] (not standardised), sample covariance, pinv, threshold = 97.5th empirical percentile of distances",
+   "logistic": [
+    "gx",
+    "gy",
+    "priority",
+    "col_mean_excl",
+    "m_Direct",
+    "m_Indirect",
+    "m_Semi-Indirect",
+    "f_pair",
+    "f_single"
+   ],
+   "concern_index": "per column: -z(mean vel), z(CoV of vel), z(% Doubtful), equal weights, z with ddof=1"
+  },
+  "moran": {
+   "weights": "binary, w_ij=1 if Euclidean distance between (gx,gy) grid coordinates <= 1.5 (i!=j), not row-standardised; gx = bay + 0.5 for 'B' sub-bay, gy = gridline letter A..H -> 1..8; core column 'C1' excluded (no coordinates)",
+   "variable": "column mean pulse velocity",
+   "n_columns": 25,
+   "I": 0.102,
+   "E_I": -0.042,
+   "n_neighbour_links": 90,
+   "permutations": 5000,
+   "perm_p_two_sided": 0.263,
+   "null_2.5_97.5": [
+    -0.258,
+    0.254
+   ],
+   "null_mean": -0.041,
+   "stored_submitted": {
+    "I": 0.1023,
+    "p": 0.26015
+   }
+  },
+  "script03_pooled_oof_auc_rank_based": 0.637,
+  "script03_pooled_oof_auc_submitted_trapz": 0.636
+ },
+ "step10_monte_carlo": {
+  "M_replicates_per_point": 20000,
+  "seed": 20,
+  "sigma_repeatability": "0.02 x corrected velocity (relative, normal)",
+  "sigma_delta_indirect": 0.034,
+  "sigma_delta_indirect_source": "(upper-lower)/(2*1.96) of the point-bootstrap CI [0.16, 0.295] of the indirect offset; hard-wired from deep_results.json",
+  "sigma_delta_semi": 0.03,
+  "sigma_delta_semi_propagated": "Yes, as a fixed hard-coded value 0.030 km/s (NOT estimated from the data or its bootstrap CI; the semi offset has no bootstrap CI in the pipeline); direct sigma_delta = 0",
+  "combination": "per-point sd = sqrt((0.02 v_corr)^2 + sigma_delta[arrangement]^2), draws independent per point",
+  "interval_method": "no interval: per-point class probabilities from M normal draws; point 'not confident' if max class probability < 0.8; no CI on probabilities (Monte-Carlo SE of a probability <= 0.0035 at M=20000)",
+  "pct_not_confident_maxP_lt_0.8": 18.398,
+  "pct_confident": 81.602,
+  "submitted_novelty_results_json_value": 18.4,
+  "spec_value": 18.8,
+  "expected_doubtful_count": 24.689,
+  "doubtful_prob_gt_0.5": 25,
+  "flip_fractions": {
+   "method_in_script": "script 03_extra_analyses.py: y*(1+N(0,frac)) multiplicative noise on RAW velocity, 2000 replicates per level (3000 for the 2% scatter figure), seed 11 (stream replicated incl. the preceding bootstrap draws); flips = grade differs from raw grade; fragile = flip prob > 0.10",
+   "replicated_simulation": {
+    "1pct": {
+     "mean_flip_prob": 0.049,
+     "pct_fragile_gt10": 15.6
+    },
+    "2pct": {
+     "mean_flip_prob": 0.092,
+     "pct_fragile_gt10": 29.0
+    },
+    "3pct": {
+     "mean_flip_prob": 0.131,
+     "pct_fragile_gt10": 42.2
+    }
+   },
+   "analytic_exact_normal": {
+    "1pct": {
+     "mean_flip_prob": 0.05,
+     "pct_fragile_gt10": 15.6
+    },
+    "2pct": {
+     "mean_flip_prob": 0.092,
+     "pct_fragile_gt10": 29.2
+    },
+    "3pct": {
+     "mean_flip_prob": 0.131,
+     "pct_fragile_gt10": 42.9
+    }
+   },
+   "submitted": {
+    "1pct": 15.6,
+    "2pct": 29.0,
+    "3pct": 42.2
+   }
+  }
+ },
+ "step11_figures": {
+  "g9_concern.png": "regenerated, 26 columns, 7.5 pt labels, hatch by priority",
+  "gDb_fragility_bars.png": "regenerated; original wrote '\\%' (LaTeX escape) inside matplotlib text (non-usetex) so literal backslashes showed; now plain %",
+  "gE_concern_priority.png": "original checked: no truncated labels, left unchanged"
+ },
+ "notes": {
+  "step2d": "No column was measured with both direct and indirect arrangements (0 of 26). The column-centred indirect mean is computed against a column mean that already contains the arrangement mix of that column (Indirect points sit with Semi-direct points or alone; Direct points sit with Semi-direct points), so the column-centred estimate (delta_indirect = 0.237) is attenuated relative to the within-column contrast. The column fixed-effects estimate uses only within-column differences and is identified through the semi-direct arrangement as a bridge (additivity assumption: the arrangement offset is the same in every column): indirect vs semi within 12 columns, semi vs direct within 12 other columns, chained.",
+  "step5_excellent": "Excellent total changes at delta=+0.237/-0.055 because (i) semi-direct points are shifted down by 0.055 km/s and those just above 4.5 km/s fall to Good (Excellent->Good by arrangement: {'Direct': 0, 'Semi-Indirect': 12, 'Indirect': 0}), and (ii) indirect points are shifted up by 0.237 and those between 4.263 and 4.5 km/s rise to Excellent (Good->Excellent by arrangement: {'Direct': 1, 'Semi-Indirect': 0, 'Indirect': 10}). Direct points are unchanged.",
+  "step5_data_quirk": "Stored quality differs from the threshold rule applied to raw velocity for 1 point(s): C1-1B : C1.F AB1 v=4.594 stored Good (so the Direct Good->Excellent transition above is this record, not a shift).",
+  "g9_original_labels": "original g9 y-labels were mangled by n.replace('C1','').replace(' ','') -> e.g. '-1A:.C' (column prefix lost); replaced by full ids"
+ },
+ "meta": {
+  "seed": 42,
+  "n_points": 462,
+  "n_columns": 26,
+  "label_note": "'Semi-Indirect' in data = 'semi-direct' in the paper"
+ }
+}

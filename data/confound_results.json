@@ -1,0 +1,49 @@
+{
+  "full_sample": {
+    "n_direct": 108,
+    "n_indirect": 216,
+    "direct_indirect_gap": 0.848,
+    "gap_ci": [
+      0.748,
+      0.941
+    ],
+    "indirect_cc_deficit": -0.143,
+    "deficit_ci": [
+      -0.181,
+      -0.096
+    ]
+  },
+  "sound_no_doubtful": {
+    "n_direct": 106,
+    "n_indirect": 189,
+    "direct_indirect_gap": 0.743,
+    "gap_ci": [
+      0.668,
+      0.82
+    ],
+    "indirect_cc_deficit": -0.144,
+    "deficit_ci": [
+      -0.176,
+      -0.101
+    ]
+  },
+  "sound_good_excellent_only": {
+    "n_direct": 104,
+    "n_indirect": 150,
+    "direct_indirect_gap": 0.648,
+    "gap_ci": [
+      0.58,
+      0.713
+    ],
+    "indirect_cc_deficit": -0.138,
+    "deficit_ci": [
+      -0.17,
+      -0.094
+    ]
+  },
+  "ambiguous_pct_vs_sigma": {
+    "1pct": 10.6,
+    "2pct": 18.8,
+    "3pct": 28.1
+  }
+}

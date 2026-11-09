@@ -1,0 +1,28 @@
+{
+  "sigma_delta_indirect": 0.0344,
+  "expected_class_counts": {
+    "Doubtful": 24.7,
+    "Medium": 35.0,
+    "Good": 292.6,
+    "Excellent": 109.7
+  },
+  "hard_class_counts": {
+    "Doubtful": 35,
+    "Medium": 48,
+    "Good": 270,
+    "Excellent": 109
+  },
+  "pct_points_ambiguous_maxP_lt_0.8": 18.4,
+  "pct_points_confident": 81.6,
+  "repair_impact": {
+    "doubtful_points_original": 35,
+    "doubtful_points_corrected": 25,
+    "doubtful_points_expected_prob": 24.7,
+    "doubtful_points_prob_gt50": 25,
+    "pct_reduction_points": 28.6,
+    "columns_triggering_repair_original": 16,
+    "columns_triggering_repair_corrected": 15,
+    "columns_triggering_repair_prob": 15,
+    "n_columns_total": 26
+  }
+}

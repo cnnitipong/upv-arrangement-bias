@@ -1,0 +1,66 @@
+{
+  "variance_decomposition": {
+    "R2_arrangement": 0.376,
+    "R2_priority": 0.094,
+    "R2_arrangement_plus_priority": 0.422,
+    "R2_column_fixed": 0.344,
+    "R2_full": 0.471,
+    "partial_eta2_arrangement_given_priority": 0.362,
+    "partial_eta2_priority_given_arrangement": 0.074,
+    "partial_eta2_arrangement_within_column": 0.194
+  },
+  "icc_column": 0.344,
+  "odds_ratio_doubtful": {
+    "indirect_vs_direct": {
+      "OR": 7.57,
+      "ci95": [
+        2.58,
+        167567.4
+      ]
+    },
+    "indirect_vs_semi": {
+      "OR": 3.14,
+      "ci95": [
+        1.38,
+        11.39
+      ]
+    }
+  },
+  "loco_correction": {
+    "base_offset": 0.237,
+    "loco_mean": 0.237,
+    "loco_min": 0.224,
+    "loco_max": 0.251,
+    "loco_sd": 0.007,
+    "n_folds": 26
+  },
+  "classification_reliability": {
+    "1pct": {
+      "mean_flip_prob": 0.049,
+      "pct_points_fragile_gt10": 15.6
+    },
+    "2pct": {
+      "mean_flip_prob": 0.092,
+      "pct_points_fragile_gt10": 29.0
+    },
+    "3pct": {
+      "mean_flip_prob": 0.131,
+      "pct_points_fragile_gt10": 42.2
+    }
+  },
+  "concern_vs_priority": {
+    "spearman_rho": 0.472,
+    "perm_p": 0.0154,
+    "n_columns": 26,
+    "top5_priority": [
+      1,
+      1,
+      3,
+      2,
+      2
+    ]
+  },
+  "roc": {
+    "cv_auc": 0.636
+  }
+}
