@@ -111,7 +111,7 @@ ax.axis("off")
 # Top / master boxes
 top_x, top_y, top_w, top_h = 5, 10.3, 4.6, 0.9
 box(ax, top_x, top_y, top_w, top_h,
-    "Inspection report: 462 UPV points\n26 RC columns, post-earthquake", emph=True)
+    "Field inspection: 462 UPV points\n26 RC columns, post-earthquake", emph=True)
 
 extr_x, extr_y, extr_w, extr_h = 5, 9.0, 3.9, 0.7
 box(ax, extr_x, extr_y, extr_w, extr_h, "Extraction and validation against summary tables")

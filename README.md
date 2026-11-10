@@ -39,7 +39,7 @@ upv-arrangement-bias/
 
 | Column | Meaning |
 |---|---|
-| `col` | Column identifier (as in the inspection report) |
+| `col` | Column identifier (as in the field records) |
 | `point` | Test point ID within the column |
 | `vel` | Measured pulse velocity, km/s (velocities were recorded directly; transit times were not stored) |
 | `rebN` | Mean rebound number at the point |
@@ -73,7 +73,7 @@ The `data/*.json` files are the reference results of the submitted analysis (use
 All randomness is seeded: `default_rng(42)` in script 01 and `revision_analysis.py` (whose Monte-Carlo step uses seed 20 and replicates the seed-11 stream of script 03), and `default_rng(20)` in script 05. A re-run from a fresh copy reproduces the reference JSON results; `master_dataset.csv` rebuilt by script 01 matches `data/master_dataset.csv` in all values (formatting of floats may differ).
 
 ## Not included
-- The original inspection report (PDF, in Thai) and field photographs. The per-point CSVs in `data/` were extracted from the report beforehand. Without the photographs, script 02 skips the photo composite `g0_field.png` and prints a note.
+- Field photographs. The per-point CSVs in `data/` were compiled beforehand from the field inspection records. Without the photographs, script 02 skips the photo composite `g0_field.png` and prints a note.
 - Manuscript LaTeX sources and superseded exploratory scripts.
 
 ## How to cite
